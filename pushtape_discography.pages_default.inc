@@ -13,8 +13,8 @@ function pushtape_discography_default_page_manager_pages() {
   $page->api_version = 1;
   $page->name = 'pushtape_albums';
   $page->task = 'page';
-  $page->admin_title = 'Pushtape albums';
-  $page->admin_description = 'Album view of discography';
+  $page->admin_title = 'Pushtape Albums';
+  $page->admin_description = 'Album view of Discography';
   $page->path = 'discography/albums';
   $page->access = array();
   $page->menu = array(
@@ -132,7 +132,7 @@ function pushtape_discography_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
-  $page->name = 'pushtape_music_panel';
+  $page->name = 'pushtape_discography_panel';
   $page->task = 'page';
   $page->admin_title = 'Pushtape Discography Overview';
   $page->admin_description = 'Discography';
@@ -158,9 +158,9 @@ function pushtape_discography_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_pushtape_music_panel_panelizer_node';
+  $handler->name = 'page_pushtape_discography_panel_panelizer_node';
   $handler->task = 'page';
-  $handler->subtask = 'pushtape_music_panel';
+  $handler->subtask = 'pushtape_discography_panel';
   $handler->handler = 'panelizer_node';
   $handler->weight = 0;
   $handler->conf = array(
@@ -177,9 +177,9 @@ function pushtape_discography_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_pushtape_music_panel_panel_context';
+  $handler->name = 'page_pushtape_discography_panel_panel_context';
   $handler->task = 'page';
-  $handler->subtask = 'pushtape_music_panel';
+  $handler->subtask = 'pushtape_discography_panel';
   $handler->handler = 'panel_context';
   $handler->weight = 1;
   $handler->conf = array(
@@ -276,7 +276,7 @@ function pushtape_discography_default_page_manager_pages() {
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
-  $pages['pushtape_music_panel'] = $page;
+  $pages['pushtape_discography_panel'] = $page;
 
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
