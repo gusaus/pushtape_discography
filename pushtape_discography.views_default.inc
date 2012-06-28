@@ -376,6 +376,15 @@ function pushtape_discography_views_default_views() {
 
   /* Display: Releases Slideshow */
   $handler = $view->new_display('panel_pane', 'Releases Slideshow', 'releases_slideshow');
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler->display->display_options['path'] = 'releases';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'Releases';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'features';
+  $handler->display->display_options['menu']['context'] = 0;
   $export['releases'] = $view;
 
   $view = new view;
