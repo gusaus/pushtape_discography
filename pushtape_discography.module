@@ -8,7 +8,7 @@ include_once('pushtape_discography.features.inc');
 
 
 /**
- * Implementation of hook_apps_app_info()
+ * Implements hook_apps_app_info()
  */
 function pushtape_discography_apps_app_info() {
   return array(
@@ -20,7 +20,7 @@ function pushtape_discography_apps_app_info() {
   );
 }
 
-/** 
+/**
  * App Configuration Form
  */
 function pushtape_discography_configure_form($form, &$form_state) {
@@ -31,5 +31,5 @@ function pushtape_discography_configure_form($form, &$form_state) {
     '#value' => t('Save'),
   );
 
-   return $form;
+  return $form;
 }
