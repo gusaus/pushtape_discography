@@ -5,6 +5,7 @@ package = Pushtape Demo Content
 php = 5.2.4
 version = 7.x-1.x-beta1
 project = pushtape_discography_democontent
+dependencies[] = uuid
 dependencies[] = defaultcontent
 dependencies[] = pushtape_discography
 features[content][] = pushtape-discography-defaultcontent-1
