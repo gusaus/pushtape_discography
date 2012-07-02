@@ -65,12 +65,6 @@ function pushtape_discography_field_default_fields() {
           'type' => 'text_default',
           'weight' => '3',
         ),
-        'mediaplaylist' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '0',
-        ),
         'teaser' => array(
           'label' => 'hidden',
           'module' => 'text',
@@ -163,12 +157,6 @@ function pushtape_discography_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
-        'mediaplaylist' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '0',
-        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -255,12 +243,6 @@ function pushtape_discography_field_default_fields() {
             'image_style' => 'artwork_medium',
           ),
           'type' => 'image',
-          'weight' => '0',
-        ),
-        'mediaplaylist' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
           'weight' => '0',
         ),
         'teaser' => array(
@@ -367,12 +349,6 @@ function pushtape_discography_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
-        'mediaplaylist' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '0',
-        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -460,12 +436,6 @@ function pushtape_discography_field_default_fields() {
           'type' => 'taxonomy_term_reference_link',
           'weight' => '5',
         ),
-        'mediaplaylist' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '0',
-        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -550,7 +520,7 @@ function pushtape_discography_field_default_fields() {
           'label' => 'above',
           'module' => 'entityreference',
           'settings' => array(
-            'view_mode' => 'mediaplaylist',
+            'view_mode' => 'default',
           ),
           'type' => 'entityreference_entity_view',
           'weight' => '7',
@@ -560,15 +530,6 @@ function pushtape_discography_field_default_fields() {
           'settings' => array(),
           'type' => 'hidden',
           'weight' => 0,
-        ),
-        'mediaplaylist' => array(
-          'label' => 'hidden',
-          'module' => 'entityreference',
-          'settings' => array(
-            'link' => 1,
-          ),
-          'type' => 'entityreference_label',
-          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -655,12 +616,6 @@ function pushtape_discography_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '0',
-        ),
-        'mediaplaylist' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
           'weight' => '0',
         ),
         'teaser' => array(
@@ -764,12 +719,6 @@ function pushtape_discography_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
-        'mediaplaylist' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '0',
-        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -856,12 +805,6 @@ function pushtape_discography_field_default_fields() {
           'settings' => array(),
           'type' => 'hidden',
           'weight' => 0,
-        ),
-        'mediaplaylist' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -950,12 +893,6 @@ function pushtape_discography_field_default_fields() {
           ),
           'type' => 'image',
           'weight' => '8',
-        ),
-        'mediaplaylist' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1060,12 +997,6 @@ function pushtape_discography_field_default_fields() {
           'type' => 'text_default',
           'weight' => '3',
         ),
-        'mediaplaylist' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '0',
-        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -1154,12 +1085,6 @@ function pushtape_discography_field_default_fields() {
           'type' => 'list_default',
           'weight' => '6',
         ),
-        'mediaplaylist' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '0',
-        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -1236,12 +1161,6 @@ function pushtape_discography_field_default_fields() {
           'settings' => array(),
           'type' => 'text_default',
           'weight' => '2',
-        ),
-        'mediaplaylist' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1323,12 +1242,6 @@ function pushtape_discography_field_default_fields() {
           'settings' => array(),
           'type' => 'hidden',
           'weight' => 0,
-        ),
-        'mediaplaylist' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1416,12 +1329,6 @@ function pushtape_discography_field_default_fields() {
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '4',
-        ),
-        'mediaplaylist' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
