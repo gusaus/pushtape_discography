@@ -1,14 +1,14 @@
 core = 7.x
 api = 2
 
-projects[entityreference] = 1.0-rc3
+projects[entityreference][version] = 1.0-rc3
 projects[entityreference][subdir] = contrib
 
 projects[ctools][version] = 1.0
 projects[ctools][subdir] = contrib
 projects[ctools][type] = module
 
-projects[defaultcontent] = 1.x-dev
+projects[defaultcontent][version] = 1.x-dev
 projects[defaultcontent][subdir] = contrib
 
 projects[uuid][version] = 1.x-dev
