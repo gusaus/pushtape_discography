@@ -12,8 +12,8 @@ include_once('pushtape_discography.features.inc');
  */
 function pushtape_discography_apps_app_info() {
   return array(
-    'demo content description' => 'add some tracks and terms',
-    'demo content module' => 'pushtape_discography_democontent',
+//    'demo content description' => 'add some tracks and terms',
+   // 'demo content module' => 'pushtape_discography_democontent',
     'configure form' => 'pushtape_discography_configure_form',
     // 'post install callback' => 'pushtape_discography_app_post_install', // This will be called after the app is enabled intialy or of the app has been uninstalled
     // 'status callback' => 'pushtape_discography_app_status'

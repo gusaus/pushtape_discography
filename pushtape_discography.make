@@ -8,16 +8,6 @@ projects[ctools][version] = 1.0
 projects[ctools][subdir] = contrib
 projects[ctools][type] = module
 
-projects[defaultcontent][version] = 1.x-dev
-projects[defaultcontent][subdir] = contrib
-
-projects[uuid][version] = 1.x-dev
-projects[uuid][type] = module
-projects[uuid][subdir] = contrib
-projects[uuid][download][type] = git
-projects[uuid][download][revision] = bf06527
-projects[uuid][download][branch] = 7.x-1.x
-
 projects[features][version] = 1.0-rc3
 projects[features][subdir] = contrib
 projects[features][type] = module
