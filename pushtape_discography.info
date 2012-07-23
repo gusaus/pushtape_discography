@@ -1,4 +1,5 @@
 name = Pushtape Discography
+<<<<<<< HEAD
 description = Creates album and track content types and views.
 core = 7.x
 package = Pushtape
@@ -7,6 +8,15 @@ version = 7.x-1.0-alpha2
 project = pushtape_discography
 dependencies[] = context
 dependencies[] = ctools
+=======
+description = Feature package that creates album and track content types and views.
+core = 7.x
+package = Pushtape
+php = 5.2.4
+version = 7.x-1.4
+project = pushtape_discography
+dependencies[] = block
+>>>>>>> 8d5122173e86c68f6ee696f4869639aed9b24aa3
 dependencies[] = entity
 dependencies[] = entityreference
 dependencies[] = features
@@ -14,6 +24,7 @@ dependencies[] = image
 dependencies[] = list
 dependencies[] = menu
 dependencies[] = pathauto
+<<<<<<< HEAD
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = views
@@ -27,22 +38,40 @@ features[field][] = node-album-body
 features[field][] = node-album-field_artist_term
 features[field][] = node-album-field_artwork
 features[field][] = node-album-field_release_date
+=======
+dependencies[] = taxonomy
+dependencies[] = views
+datestamp = 1324622174
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[field][] = node-album-body
+features[field][] = node-album-field_artist
+features[field][] = node-album-field_artwork
+>>>>>>> 8d5122173e86c68f6ee696f4869639aed9b24aa3
 features[field][] = node-album-field_tags
 features[field][] = node-album-field_tracklist
 features[field][] = node-track-body
 features[field][] = node-track-field_album
+<<<<<<< HEAD
 features[field][] = node-track-field_artist_term
+=======
+features[field][] = node-track-field_artist
+>>>>>>> 8d5122173e86c68f6ee696f4869639aed9b24aa3
 features[field][] = node-track-field_artwork
 features[field][] = node-track-field_credits
 features[field][] = node-track-field_license
 features[field][] = node-track-field_lyrics
+<<<<<<< HEAD
 features[field][] = node-track-field_release_date
+=======
+>>>>>>> 8d5122173e86c68f6ee696f4869639aed9b24aa3
 features[field][] = node-track-field_tags
 features[image][] = artwork_huge
 features[image][] = artwork_large
 features[image][] = artwork_medium
 features[image][] = artwork_small
 features[image][] = artwork_thumbnail
+<<<<<<< HEAD
 features[node][] = album
 features[node][] = track
 features[taxonomy][] = artist
@@ -68,3 +97,18 @@ files[] = pushtape_discography.module
 files[] = pushtape_discography.strongarm
 files[] = pushtape_discography.views_default.inc
 project status url = http://updates.drupal.org/release-history/pushtape_discography/7.x
+=======
+features[menu_custom][] = main-menu
+features[menu_custom][] = management
+features[menu_links][] = main-menu:albums
+features[menu_links][] = main-menu:releases
+features[menu_links][] = main-menu:tracks
+features[node][] = album
+features[node][] = track
+features[taxonomy][] = artists
+features[taxonomy][] = tags
+features[user_role][] = artist
+features[views_view][] = albums
+features[views_view][] = releases
+features[views_view][] = tracks
+>>>>>>> 8d5122173e86c68f6ee696f4869639aed9b24aa3
