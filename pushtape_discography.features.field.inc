@@ -202,7 +202,6 @@ function pushtape_discography_field_default_fields() {
       'locked' => '0',
       'module' => 'image',
       'settings' => array(
-        'default_image' => '1',
         'uri_scheme' => 'public',
       ),
       'translatable' => '1',
@@ -752,7 +751,6 @@ function pushtape_discography_field_default_fields() {
       'locked' => '0',
       'module' => 'image',
       'settings' => array(
-        'default_image' => '1',
         'uri_scheme' => 'public',
       ),
       'translatable' => '1',
