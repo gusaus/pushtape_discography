@@ -202,6 +202,7 @@ function pushtape_discography_field_default_fields() {
       'locked' => '0',
       'module' => 'image',
       'settings' => array(
+        'default_image' => 0,
         'uri_scheme' => 'public',
       ),
       'translatable' => '1',
@@ -264,21 +265,6 @@ function pushtape_discography_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'filefield_sources' => array(
-            'filefield_sources' => array(
-              'attach' => 0,
-              'reference' => 0,
-              'remote' => 'remote',
-            ),
-            'source_attach' => array(
-              'absolute' => '0',
-              'attach_mode' => 'copy',
-              'path' => 'file_attach',
-            ),
-            'source_reference' => array(
-              'autocomplete' => '0',
-            ),
-          ),
           'preview_image_style' => 'artwork_medium',
           'progress_indicator' => 'throbber',
         ),
@@ -751,6 +737,7 @@ function pushtape_discography_field_default_fields() {
       'locked' => '0',
       'module' => 'image',
       'settings' => array(
+        'default_image' => 0,
         'uri_scheme' => 'public',
       ),
       'translatable' => '1',
@@ -813,21 +800,6 @@ function pushtape_discography_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'filefield_sources' => array(
-            'filefield_sources' => array(
-              'attach' => 0,
-              'reference' => 0,
-              'remote' => 'remote',
-            ),
-            'source_attach' => array(
-              'absolute' => '0',
-              'attach_mode' => 'copy',
-              'path' => 'file_attach',
-            ),
-            'source_reference' => array(
-              'autocomplete' => '0',
-            ),
-          ),
           'preview_image_style' => 'artwork_small',
           'progress_indicator' => 'throbber',
         ),
