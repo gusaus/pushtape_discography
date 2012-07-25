@@ -75,7 +75,7 @@ function pushtape_discography_panelizer_defaults() {
     $pane->pid = 'new-2';
     $pane->panel = 'column1';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_artist_term';
+    $pane->subtype = 'node:field_artist';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -331,7 +331,7 @@ function pushtape_discography_panelizer_defaults() {
     $pane->pid = 'new-10';
     $pane->panel = 'column1';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_artist_term';
+    $pane->subtype = 'node:field_artist';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
