@@ -324,7 +324,8 @@ function pushtape_discography_panelizer_defaults() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
-    ); $pane->css = array();
+    );
+    $pane->css = array();
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
@@ -339,7 +340,7 @@ function pushtape_discography_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'mediaplaylist_links',
+      'formatter' => 'soundmanager2_inline_player',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
@@ -350,7 +351,7 @@ function pushtape_discography_panelizer_defaults() {
         'waveform' => 1,
         'eq' => 1,
         'amplifier' => 1,
-        'diameter' => '25',
+        'diameter' => '256',
       ),
       'context' => 'panelizer',
       'override_title' => 0,
