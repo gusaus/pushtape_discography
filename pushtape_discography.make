@@ -10,7 +10,7 @@ projects[entity][subdir] = contrib
 projects[entityreference][version] = 1.0-rc3
 projects[entityreference][subdir] = contrib
 
-projects[ctools][version] = 1.0
+projects[ctools][version] = 1.1
 projects[ctools][subdir] = contrib
 projects[ctools][type] = module
 
