@@ -39,3 +39,4 @@ projects[panelizer][download][type] = git
 projects[panelizer][download][revision] = c7942f3
 projects[panelizer][download][branch] = 7.x-3.x
 projects[panelizer][patch][1648040] = http://drupal.org/files/panelizer-no-notice-view-modes-updated.patch
+projects[panelizer][patch][1412022] = http://drupal.org/files/panelizer-duplicates-1412022-10_1.patch
