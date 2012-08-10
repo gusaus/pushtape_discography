@@ -68,6 +68,6 @@ class TrackTestCase extends DrupalWebTestCase {
     // Use '$this->assertRaw' to make certain to test the body label and not some other text.
     $this->drupalGet('node/add/track');
     $this->assertResponse(200, 'node/add/track page found');
-    $this->assertRaw('<label for="edit-body-und-0-value">Example Description </label>', 'Body label equals \'Example Description\'');
+    $this->assertRaw('<label for="edit-body-und-0-value">Notes </label>', 'Body label equals \'Notes\'');
   }
 }
