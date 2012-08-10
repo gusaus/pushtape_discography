@@ -4,33 +4,33 @@
  * @file
  * Simpletest case for track module.
  *
- * Verify example module functionality.
+ * Verify pushtape discography functionality.
  */
 
 /**
- * Functionality tests for node example module.
+ * Functionality tests for node pushtape discography.
  */
 class TrackTestCase extends DrupalWebTestCase {
 
   public static function getInfo() {
     return array(
       'name' => 'Track',
-      'description' => 'Verify the custom node type creation.',
+      'description' => 'Verify the track creation.',
       'group' => 'Pushtape',
     );
   }
 
   function setUp() {
     // Enable the module.
-    parent::setUp('track');
+    parent::setUp('pushtape_discography');
   }
 
   /**
-   * Verify the functionality of the example module.
+   * Verify the functionality of the pushtape discography.
    */
   function testNodeCreation() {
     // Create and login user.
-    $account = $this->drupalCreateUser(array('access content', 'create track content'));
+    $account = $this->drupalCreateUser(array('access content'));
     $this->drupalLogin($account);
 
     // Create a new node. The image makes it more complicated, so skip it.
