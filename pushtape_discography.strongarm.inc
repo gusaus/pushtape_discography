@@ -170,6 +170,7 @@ function pushtape_discography_strongarm() {
   $strongarm->value = 0;
   $export['node_submitted_track'] = $strongarm;
 
+<<<<<<< HEAD
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -232,5 +233,7 @@ function pushtape_discography_strongarm() {
   );
   $export['panelizer_defaults_node_track'] = $strongarm;
 
+=======
+>>>>>>> 5c067da4790e8a0f79e49a107055b0a3e799ec0f
   return $export;
 }

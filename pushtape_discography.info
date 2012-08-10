@@ -3,25 +3,28 @@ description = Creates album and track content types and views.
 core = 7.x
 package = Pushtape
 php = 5.2.4
+<<<<<<< HEAD
 version = 7.x-1.0-alpha3
+=======
+version = 7.x-1.0-alpha2
+>>>>>>> 5c067da4790e8a0f79e49a107055b0a3e799ec0f
 project = pushtape_discography
-dependencies[] = block
+dependencies[] = context
 dependencies[] = ctools
+dependencies[] = entity
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = image
 dependencies[] = list
 dependencies[] = menu
-dependencies[] = page_manager
-dependencies[] = panelizer
 dependencies[] = pathauto
 dependencies[] = pushtape_ui
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = views
-apps[server] = http://apps.rosenstrauch.com/apps/query/pushtape
+features[context][] = pushtape_albums_context
+features[ctools][] = context:context:3
 features[ctools][] = page_manager:pages_default:1
-features[ctools][] = panelizer:panelizer:1
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:1
@@ -45,11 +48,14 @@ features[image][] = artwork_small
 features[image][] = artwork_thumbnail
 features[node][] = album
 features[node][] = track
+<<<<<<< HEAD
 features[page_manager_pages][] = pushtape_albums
 features[page_manager_pages][] = pushtape_music_panel
 features[page_manager_pages][] = pushtape_tracks
 features[panelizer_defaults][] = node:album:default
 features[panelizer_defaults][] = node:track:default
+=======
+>>>>>>> 5c067da4790e8a0f79e49a107055b0a3e799ec0f
 features[taxonomy][] = artist
 features[variable][] = field_bundle_settings_node__album
 features[variable][] = field_bundle_settings_node__track
@@ -63,6 +69,7 @@ features[variable][] = node_preview_album
 features[variable][] = node_preview_track
 features[variable][] = node_submitted_album
 features[variable][] = node_submitted_track
+<<<<<<< HEAD
 features[variable][] = panelizer_defaults_node_album
 features[variable][] = panelizer_defaults_node_track
 features[variable][] = panelizer_node:album_allowed_layouts
@@ -76,3 +83,14 @@ features[views_view][] = releases
 features[views_view][] = tracks
 project status url = http://apps.rosenstrauch.com/fserver
 files[] = test/pushtape_discography.test
+=======
+features[views_view][] = releases
+features[views_view][] = tracks
+files[] = pushtape_discography.features.field.inc
+files[] = pushtape_discography.features.inc
+files[] = pushtape_discography.features.taxonomy.inc
+files[] = pushtape_discography.module
+files[] = pushtape_discography.strongarm
+files[] = pushtape_discography.views_default.inc
+project status url = http://updates.drupal.org/release-history/pushtape_discography/7.x
+>>>>>>> 5c067da4790e8a0f79e49a107055b0a3e799ec0f
