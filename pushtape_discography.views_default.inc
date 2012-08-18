@@ -11,8 +11,6 @@ function pushtape_discography_views_default_views() {
   $export = array();
 
   $view = new view;
-<<<<<<< HEAD
-=======
   $view->name = 'albums';
   $view->description = '';
   $view->tag = 'default';
@@ -186,7 +184,6 @@ function pushtape_discography_views_default_views() {
   $export['albums'] = $view;
 
   $view = new view;
->>>>>>> 8d5122173e86c68f6ee696f4869639aed9b24aa3
   $view->name = 'releases';
   $view->description = '';
   $view->tag = 'default';
@@ -264,11 +261,7 @@ function pushtape_discography_views_default_views() {
   $handler->display->display_options['fields']['title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['title']['link_to_node'] = 1;
-<<<<<<< HEAD
-  /* Sort criterion: Content: Release date (field_release_date) */
-=======
   /* Sort criterion: Broken/missing handler */
->>>>>>> 8d5122173e86c68f6ee696f4869639aed9b24aa3
   $handler->display->display_options['sorts']['field_release_date_value']['id'] = 'field_release_date_value';
   $handler->display->display_options['sorts']['field_release_date_value']['table'] = 'field_data_field_release_date';
   $handler->display->display_options['sorts']['field_release_date_value']['field'] = 'field_release_date_value';
@@ -312,14 +305,6 @@ function pushtape_discography_views_default_views() {
     'track' => 'track',
   );
   $handler->display->display_options['filters']['type_1']['group'] = 2;
-<<<<<<< HEAD
-  /* Filter criterion: Broken/missing handler */
-  $handler->display->display_options['filters']['field_album_nid']['id'] = 'field_album_nid';
-  $handler->display->display_options['filters']['field_album_nid']['table'] = 'field_data_field_album';
-  $handler->display->display_options['filters']['field_album_nid']['field'] = 'field_album_nid';
-  $handler->display->display_options['filters']['field_album_nid']['operator'] = 'empty';
-  $handler->display->display_options['filters']['field_album_nid']['group'] = 2;
-=======
   /* Filter criterion: Content: Album (field_album) */
   $handler->display->display_options['filters']['field_album_target_id']['id'] = 'field_album_target_id';
   $handler->display->display_options['filters']['field_album_target_id']['table'] = 'field_data_field_album';
@@ -334,7 +319,6 @@ function pushtape_discography_views_default_views() {
   $handler->display->display_options['menu']['title'] = 'Releases';
   $handler->display->display_options['menu']['weight'] = '-1';
   $handler->display->display_options['menu']['name'] = 'main-menu';
->>>>>>> 8d5122173e86c68f6ee696f4869639aed9b24aa3
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block_1');
@@ -389,24 +373,6 @@ function pushtape_discography_views_default_views() {
   $handler->display->display_options['fields']['title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['title']['link_to_node'] = 1;
-<<<<<<< HEAD
-
-  /* Display: Releases pane */
-  $handler = $view->new_display('panel_pane', 'Releases pane', 'releases_all');
-
-  /* Display: Releases Slideshow */
-  $handler = $view->new_display('panel_pane', 'Releases Slideshow', 'releases_slideshow');
-
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page_1');
-  $handler->display->display_options['path'] = 'releases';
-  $handler->display->display_options['menu']['type'] = 'normal';
-  $handler->display->display_options['menu']['title'] = 'Releases';
-  $handler->display->display_options['menu']['weight'] = '0';
-  $handler->display->display_options['menu']['name'] = 'features';
-  $handler->display->display_options['menu']['context'] = 0;
-=======
->>>>>>> 8d5122173e86c68f6ee696f4869639aed9b24aa3
   $export['releases'] = $view;
 
   $view = new view;
@@ -432,12 +398,8 @@ function pushtape_discography_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
-<<<<<<< HEAD
-  $handler->display->display_options['style_plugin'] = 'table';
-=======
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
->>>>>>> 8d5122173e86c68f6ee696f4869639aed9b24aa3
   /* Field: Content: Artwork */
   $handler->display->display_options['fields']['field_artwork']['id'] = 'field_artwork';
   $handler->display->display_options['fields']['field_artwork']['table'] = 'field_data_field_artwork';
@@ -511,15 +473,6 @@ function pushtape_discography_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-<<<<<<< HEAD
-  /* Contextual filter: Content: Album (field_album) */
-  $handler->display->display_options['arguments']['field_album_target_id']['id'] = 'field_album_target_id';
-  $handler->display->display_options['arguments']['field_album_target_id']['table'] = 'field_data_field_album';
-  $handler->display->display_options['arguments']['field_album_target_id']['field'] = 'field_album_target_id';
-  $handler->display->display_options['arguments']['field_album_target_id']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_album_target_id']['summary']['format'] = 'default_summary';
-=======
->>>>>>> 8d5122173e86c68f6ee696f4869639aed9b24aa3
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -535,11 +488,6 @@ function pushtape_discography_views_default_views() {
     'track' => 'track',
   );
 
-<<<<<<< HEAD
-  /* Display: Tracks List */
-  $handler = $view->new_display('block', 'Tracks List', 'block');
-  $handler->display->display_options['display_description'] = 'a block displaying all tracks in a list';
-=======
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['path'] = 'tracks';
@@ -550,7 +498,6 @@ function pushtape_discography_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
->>>>>>> 8d5122173e86c68f6ee696f4869639aed9b24aa3
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'mini';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
@@ -577,18 +524,6 @@ function pushtape_discography_views_default_views() {
   $handler->display->display_options['filters']['field_album_nid']['table'] = 'field_data_field_album';
   $handler->display->display_options['filters']['field_album_nid']['field'] = 'field_album_nid';
   $handler->display->display_options['filters']['field_album_nid']['operator'] = 'empty';
-<<<<<<< HEAD
-
-  /* Display: All Tracks Pane */
-  $handler = $view->new_display('panel_pane', 'All Tracks Pane', 'tracks_all_pane');
-
-  /* Display: Track list pane */
-  $handler = $view->new_display('panel_pane', 'Track list pane', 'tracks_list_pane');
-
-  /* Display: Album track pane */
-  $handler = $view->new_display('panel_pane', 'Album track pane', 'panel_pane_1');
-=======
->>>>>>> 8d5122173e86c68f6ee696f4869639aed9b24aa3
   $export['tracks'] = $view;
 
   return $export;
