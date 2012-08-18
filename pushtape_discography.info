@@ -49,3 +49,4 @@ features[user_role][] = artist
 features[views_view][] = albums
 features[views_view][] = releases
 features[views_view][] = tracks
+files[] = tests/pushtape_discography.test
