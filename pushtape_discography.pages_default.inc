@@ -368,4 +368,3 @@ function pushtape_discography_default_page_manager_pages() {
   return $pages;
 
 }
-

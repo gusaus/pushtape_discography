@@ -449,4 +449,3 @@ function pushtape_discography_views_default_views() {
 
   return $export;
 }
-
