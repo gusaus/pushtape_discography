@@ -6,6 +6,14 @@
 
 include_once('pushtape_discography.features.inc');
 
+/**
+ * Implementation of hook_ctools_plugin_directory().
+ */
+function pushtape_discography_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'panels' && $plugin == 'display_renderers') {
+    return 'plugins/' . $plugin;
+  }
+}
 
 /**
  * Implementation of hook_apps_app_info()
@@ -20,16 +28,59 @@ function pushtape_discography_apps_app_info() {
   );
 }
 
-/** 
- * App Configuration Form
+
+
+/**
+ * Config form for Pushtape_discography
  */
 function pushtape_discography_configure_form($form, &$form_state) {
   $form = array();
-
-  $form['submit'] = array(
-    '#type' => 'submit',
-    '#value' => t('Save'),
+  
+  // This is currently just to test the apps config integration
+  $form['pushtape_discography_config_group'] = array(
+      '#type' => 'fieldset',
+      '#title' => "Configuration Options for Panopoly News",
   );
 
-   return $form;
+  $form['pushtape_discography_config_group']['pushtape_discography_test'] = array(
+    '#title' => t('Trivia'),
+    '#type' => 'select',
+    '#required' => TRUE,
+    '#options' => array(
+      '1' => 'Mark Antony',
+      '0' => 'Mark Anthony',
+    ),
+    '#default_value' => variable_get('pushtape_discography_test', FALSE) ? '1' : '0',
+    '#description' => t('Which Mark is superior?'),
+  );
+
+  return system_settings_form($form);
+}
+
+/**
+ * Preprocess the panels_ipe_toolbar to change/style text for IPE buttons
+ */
+function pushtape_discography_preprocess_panels_ipe_toolbar(&$vars) {
+  foreach ($vars['buttons'] as $panel_context_id => $panel_context) {
+    if (array_key_exists('panels-ipe-add-content', $panel_context) || array_key_exists('panels-ipe-configure-app', $panel_context)) {
+      foreach ($panel_context as $button_name => $button) {
+        switch ($button_name) {
+          case 'panels-ipe-startedit':
+            $vars['buttons'][$panel_context_id][$button_name]['#title'] = 'Organize this content';
+            unset($vars['buttons'][$panel_context_id][$button_name]['#attributes']['class']);
+            $vars['buttons'][$panel_context_id][$button_name]['#attributes']['class'] = array('panels-ipe-style', 'panels-ipe-pseudobutton');
+            break;
+          case 'panels-ipe-change-layout':
+            $vars['buttons'][$panel_context_id][$button_name]['#title'] = 'Change this layout';
+            break;
+          case 'panels-ipe-add-content':
+            $pull = array($button_name => $vars['buttons'][$panel_context_id][$button_name]);
+            unset($vars['buttons'][$panel_context_id][$button_name]);
+            break;
+        }
+      }
+      // Move add button to front of array
+      $vars['buttons'][$panel_context_id] = array_merge($pull, $vars['buttons'][$panel_context_id]);
+    }
+  }
 }
