@@ -44,7 +44,7 @@ function pushtape_discography_apps_app_info() {
     'post install callback' => 'pushtape_discography_app_post_install', // This will be called after the app is enabled intialy or of the app has been uninstalled
     'status callback' => 'pushtape_discography_app_status'
     
-    This call back is used to render a status table on the config page.  it should be an array with two keys (and on optional third) 
+    // This call back is used to render a status table on the config page.  it should be an array with two keys (and on optional third) 
     array(
       'title' =>'Status'  //title of the table,
       'items' => array(  //rows in the table with any keys
