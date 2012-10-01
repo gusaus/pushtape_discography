@@ -55,10 +55,10 @@ function pushtape_discography_apps_app_info() {
           'action' => array(l("Link to do something!", "")),
         ),
       ),
-      // headers are optional but these are the default
+      // headers are optional but these are the default     serverity and 
       'headers' => array('severity', 'title', 'description', 'action')
     );
-    serverity and 
+
 
 }
 
