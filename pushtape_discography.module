@@ -43,7 +43,7 @@ function pushtape_discography_apps_app_info() {
     'configure form' => 'pushtape_discography_app_configure_form', // This form will be render on the app config page
     'post install callback' => 'pushtape_discography_app_post_install', // This will be called after the app is enabled intialy or of the app has been uninstalled
     'status callback' => 'pushtape_discography_app_status'
-    /*
+    
     This call back is used to render a status table on the config page.  it should be an array with two keys (and on optional third) 
     array(
       'title' =>'Status'  //title of the table,
@@ -59,7 +59,7 @@ function pushtape_discography_apps_app_info() {
       'headers' => array('severity', 'title', 'description', 'action')
     );
     serverity and 
-    */
+
 }
 
 /**
