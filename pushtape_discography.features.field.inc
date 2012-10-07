@@ -81,7 +81,7 @@ function pushtape_discography_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'display_summary' => 0,
-        'text_processing' => '0',
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -520,7 +520,7 @@ function pushtape_discography_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'display_summary' => 0,
-        'text_processing' => '0',
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -877,7 +877,7 @@ function pushtape_discography_field_default_fields() {
         'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'rows' => '2',
+          'rows' => '1',
         ),
         'type' => 'text_textarea',
         'weight' => '5',
@@ -1035,7 +1035,7 @@ function pushtape_discography_field_default_fields() {
       'label' => 'Lyrics',
       'required' => 0,
       'settings' => array(
-        'text_processing' => '0',
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
