@@ -11,7 +11,7 @@ function pushtape_discography_demo_content_defaults() {
   $content = array();
 
   $content['pushtape-discography-demo-1'] = (object) array(
-    'exported_path' => 'track/appleface-magnet',
+    'exported_path' => 'track/august-porch',
     'title' => 'August Porch',
     'status' => '1',
     'promote' => '1',
