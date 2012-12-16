@@ -408,8 +408,8 @@ function pushtape_discography_field_default_fields() {
         'default' => array(
           'label' => 'above',
           'module' => 'pushtape_ui',
-          'settings' => array(),
-          'type' => 'pushtape_ui_ol_view',
+          'settings' => array('view_name' => 'pushtape_ordered_list'),
+          'type' => 'pushtape_ui_tracklist_view',
           'weight' => '1',
         ),
         'teaser' => array(
