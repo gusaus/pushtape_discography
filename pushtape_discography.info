@@ -93,4 +93,5 @@ features[views_view][] = albums
 features[views_view][] = releases
 features[views_view][] = tracklist
 features[views_view][] = tracks
-project status url = http://apps.rosenstrauch.com/fserver
+project status url = project status url = http://updates.drupal.org/release-history/pushtape_discography/7.x
+apps[server] = http://apps.pushtape.openlearninglabs.org/app/query/pushtape
