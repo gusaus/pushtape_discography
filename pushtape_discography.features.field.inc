@@ -857,11 +857,7 @@ function pushtape_discography_field_default_fields() {
           'rows' => '2',
         ),
         'type' => 'text_textarea',
-<<<<<<< HEAD
         'weight' => '6',
-=======
-        'weight' => '5',
->>>>>>> renamed and comitted
       ),
     ),
   );
