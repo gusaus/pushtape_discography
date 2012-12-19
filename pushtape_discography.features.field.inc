@@ -10,7 +10,7 @@
 function pushtape_discography_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-album-body'
+  // Exported field: 'node-album-body'.
   $fields['node-album-body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -33,6 +33,7 @@ function pushtape_discography_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -64,7 +65,6 @@ function pushtape_discography_field_default_fields() {
           'type' => 'text_default',
           'weight' => '3',
         ),
-
         'teaser' => array(
           'label' => 'hidden',
           'module' => 'text',
@@ -145,6 +145,12 @@ function pushtape_discography_field_default_fields() {
           'type' => 'taxonomy_term_reference_link',
           'weight' => '4',
         ),
+        'featured' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -217,6 +223,12 @@ function pushtape_discography_field_default_fields() {
           'type' => 'image',
           'weight' => '0',
         ),
+        'featured' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'full' => array(
           'label' => 'hidden',
           'module' => 'image',
@@ -227,7 +239,6 @@ function pushtape_discography_field_default_fields() {
           'type' => 'image',
           'weight' => '0',
         ),
-
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -286,7 +297,6 @@ function pushtape_discography_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_release_date',
-
       'foreign keys' => array(),
       'indexes' => array(),
       'locked' => '0',
@@ -327,6 +337,12 @@ function pushtape_discography_field_default_fields() {
           'type' => 'date_default',
           'weight' => '5',
         ),
+        'featured' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -362,8 +378,7 @@ function pushtape_discography_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-album-field_tracklist'
-
+  // Exported field: 'node-album-field_tracklist'.
   $fields['node-album-field_tracklist'] = array(
     'field_config' => array(
       'active' => '1',
@@ -425,6 +440,12 @@ function pushtape_discography_field_default_fields() {
           'type' => 'pushtape_ui_tracklist_view',
           'weight' => '1',
         ),
+        'featured' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -479,7 +500,7 @@ function pushtape_discography_field_default_fields() {
       'locked' => '0',
       'module' => 'text',
       'settings' => array(),
-      'translatable' => '1',
+      'translatable' => '0',
       'type' => 'text_with_summary',
     ),
     'field_instance' => array(
@@ -495,6 +516,12 @@ function pushtape_discography_field_default_fields() {
           'type' => 'text_default',
           'weight' => '4',
         ),
+        'featured' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'full' => array(
           'label' => 'hidden',
           'module' => 'text',
@@ -502,7 +529,6 @@ function pushtape_discography_field_default_fields() {
           'type' => 'text_default',
           'weight' => '0',
         ),
-
         'teaser' => array(
           'label' => 'hidden',
           'module' => 'text',
@@ -598,6 +624,12 @@ function pushtape_discography_field_default_fields() {
           'type' => 'entityreference_label',
           'weight' => '11',
         ),
+        'featured' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -668,6 +700,12 @@ function pushtape_discography_field_default_fields() {
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '10',
+        ),
+        'featured' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -741,6 +779,12 @@ function pushtape_discography_field_default_fields() {
           'type' => 'image',
           'weight' => '0',
         ),
+        'featured' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'full' => array(
           'label' => 'hidden',
           'module' => 'image',
@@ -751,7 +795,6 @@ function pushtape_discography_field_default_fields() {
           'type' => 'image',
           'weight' => '8',
         ),
-
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -827,6 +870,12 @@ function pushtape_discography_field_default_fields() {
           'type' => 'text_default',
           'weight' => '6',
         ),
+        'featured' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'full' => array(
           'label' => 'above',
           'module' => 'text',
@@ -834,7 +883,6 @@ function pushtape_discography_field_default_fields() {
           'type' => 'text_default',
           'weight' => '3',
         ),
-
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -910,6 +958,12 @@ function pushtape_discography_field_default_fields() {
           'type' => 'list_default',
           'weight' => '7',
         ),
+        'featured' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'full' => array(
           'label' => 'above',
           'module' => 'list',
@@ -917,7 +971,6 @@ function pushtape_discography_field_default_fields() {
           'type' => 'list_default',
           'weight' => '6',
         ),
-
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -942,7 +995,7 @@ function pushtape_discography_field_default_fields() {
     ),
   );
 
- // Exported field: 'node-track-field_lyrics'.
+  // Exported field: 'node-track-field_lyrics'.
   $fields['node-track-field_lyrics'] = array(
     'field_config' => array(
       'active' => '1',
@@ -963,6 +1016,7 @@ function pushtape_discography_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '1',
@@ -981,6 +1035,12 @@ function pushtape_discography_field_default_fields() {
           'type' => 'text_default',
           'weight' => '5',
         ),
+        'featured' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'full' => array(
           'label' => 'above',
           'module' => 'text',
@@ -988,7 +1048,6 @@ function pushtape_discography_field_default_fields() {
           'type' => 'text_default',
           'weight' => '2',
         ),
-
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -1063,6 +1122,12 @@ function pushtape_discography_field_default_fields() {
           ),
           'type' => 'date_default',
           'weight' => '12',
+        ),
+        'featured' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'teaser' => array(
           'label' => 'above',
