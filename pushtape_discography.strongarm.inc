@@ -34,6 +34,15 @@ function pushtape_discography_strongarm() {
       'search_result' => array(
         'custom_settings' => FALSE,
       ),
+      'email_plain' => array(
+        'custom_settings' => FALSE,
+      ),
+      'email_html' => array(
+        'custom_settings' => FALSE,
+      ),
+      'email_textalt' => array(
+        'custom_settings' => FALSE,
+      ),
       'token' => array(
         'custom_settings' => FALSE,
       ),
@@ -41,10 +50,10 @@ function pushtape_discography_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '-5',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '10',
         ),
       ),
       'display' => array(),
@@ -76,15 +85,28 @@ function pushtape_discography_strongarm() {
       'search_result' => array(
         'custom_settings' => FALSE,
       ),
+      'email_plain' => array(
+        'custom_settings' => FALSE,
+      ),
+      'email_html' => array(
+        'custom_settings' => FALSE,
+      ),
+      'email_textalt' => array(
+        'custom_settings' => FALSE,
+      ),
       'token' => array(
         'custom_settings' => FALSE,
       ),
-      'mediaplaylist' => array(
-        'custom_settings' => TRUE,
-      ),
     ),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'title' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '13',
+        ),
+      ),
       'display' => array(),
     ),
   );
@@ -169,92 +191,6 @@ function pushtape_discography_strongarm() {
   $strongarm->name = 'node_submitted_track';
   $strongarm->value = 0;
   $export['node_submitted_track'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_defaults_node_album';
-  $strongarm->value = array(
-    'status' => 1,
-    'view modes' => array(
-      'page_manager' => array(
-        'status' => 1,
-        'default' => 1,
-        'choice' => 0,
-      ),
-      'default' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'teaser' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'featured' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'featured' => array(
-        'status' => 1,
-        'default' => 1,
-        'choice' => 0,
-      ),
-    ),
-  );
-  $export['panelizer_defaults_node_album'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_defaults_node_track';
-  $strongarm->value = array(
-    'status' => 1,
-    'view modes' => array(
-      'page_manager' => array(
-        'status' => 1,
-        'default' => 1,
-        'choice' => 0,
-      ),
-      'default' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'teaser' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'featured' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'featured' => array(
-        'status' => 1,
-        'default' => 1,
-        'choice' => 0,
-      ),
-    ),
-  );
-  $export['panelizer_defaults_node_track'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_album_pattern';
-  $strongarm->value = 'release/[node:title]';
-  $export['pathauto_node_album_pattern'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_track_pattern';
-  $strongarm->value = 'track/[node:title]';
-  $export['pathauto_node_track_pattern'] = $strongarm;
 
   return $export;
 }

@@ -9,10 +9,10 @@
  */
 function pushtape_discography_taxonomy_default_vocabularies() {
   return array(
-    'artist' => array(
-      'name' => 'Artist',
-      'machine_name' => 'artist',
-      'description' => '',
+    'artists' => array(
+      'name' => 'Artists',
+      'machine_name' => 'artists',
+      'description' => 'Associate tracks and albums with artists.',
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '0',
