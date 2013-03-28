@@ -34,15 +34,6 @@ function pushtape_discography_strongarm() {
       'search_result' => array(
         'custom_settings' => FALSE,
       ),
-      'email_plain' => array(
-        'custom_settings' => FALSE,
-      ),
-      'email_html' => array(
-        'custom_settings' => FALSE,
-      ),
-      'email_textalt' => array(
-        'custom_settings' => FALSE,
-      ),
       'token' => array(
         'custom_settings' => FALSE,
       ),
@@ -53,7 +44,7 @@ function pushtape_discography_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '10',
+          'weight' => '11',
         ),
       ),
       'display' => array(),
@@ -85,15 +76,6 @@ function pushtape_discography_strongarm() {
       'search_result' => array(
         'custom_settings' => FALSE,
       ),
-      'email_plain' => array(
-        'custom_settings' => FALSE,
-      ),
-      'email_html' => array(
-        'custom_settings' => FALSE,
-      ),
-      'email_textalt' => array(
-        'custom_settings' => FALSE,
-      ),
       'token' => array(
         'custom_settings' => FALSE,
       ),
@@ -104,7 +86,7 @@ function pushtape_discography_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '13',
+          'weight' => '14',
         ),
       ),
       'display' => array(),
