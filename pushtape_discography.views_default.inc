@@ -272,6 +272,15 @@ function pushtape_discography_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Featured Release';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Global: Random */
+  $handler->display->display_options['sorts']['random']['id'] = 'random';
+  $handler->display->display_options['sorts']['random']['table'] = 'views';
+  $handler->display->display_options['sorts']['random']['field'] = 'random';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['operator'] = 'OR';
   $handler->display->display_options['filter_groups']['groups'] = array(
@@ -330,7 +339,7 @@ function pushtape_discography_views_default_views() {
   $handler->display->display_options['filters']['field_album_target_id']['field'] = 'field_album_target_id';
   $handler->display->display_options['filters']['field_album_target_id']['operator'] = 'empty';
   $handler->display->display_options['filters']['field_album_target_id']['group'] = 2;
-  $handler->display->display_options['pane_category']['name'] = 'Music';
+  $handler->display->display_options['pane_category']['name'] = 'Discography';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $export['releases'] = $view;
 

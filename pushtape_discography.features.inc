@@ -9,6 +9,10 @@
  */
 function pushtape_discography_ctools_plugin_api() {
   list($module, $api) = func_get_args();
+  if ($module == "file_entity" && $api == "file_default_displays") {
+    return array("version" => "1");
+  }
+  list($module, $api) = func_get_args();
   if ($module == "panelizer" && $api == "panelizer") {
     return array("version" => "1");
   }
@@ -57,7 +61,7 @@ function pushtape_discography_image_default_styles() {
   $styles['artwork_large'] = array(
     'name' => 'artwork_large',
     'effects' => array(
-      7 => array(
+      1 => array(
         'label' => 'Scale',
         'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
         'effect callback' => 'image_scale_effect',
