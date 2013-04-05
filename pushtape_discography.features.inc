@@ -84,21 +84,20 @@ function pushtape_discography_image_default_styles() {
   $styles['artwork_medium'] = array(
     'name' => 'artwork_medium',
     'effects' => array(
-      9 => array(
-        'label' => 'Scale',
-        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
-        'effect callback' => 'image_scale_effect',
-        'dimensions callback' => 'image_scale_dimensions',
-        'form callback' => 'image_scale_form',
-        'summary theme' => 'image_scale_summary',
+      2 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
         'module' => 'image',
-        'name' => 'image_scale',
+        'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => '450',
-          'height' => '',
-          'upscale' => 1,
+          'height' => '450',
         ),
-        'weight' => '2',
+        'weight' => '1',
       ),
     ),
   );
