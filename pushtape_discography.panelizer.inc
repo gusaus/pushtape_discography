@@ -583,7 +583,7 @@ function pushtape_discography_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'soundmanager2_page_player',
+      'formatter' => 'file_rendered',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
@@ -598,6 +598,7 @@ function pushtape_discography_panelizer_defaults() {
         'text' => 'title',
         'visualization' => 1,
         'waveform' => 0,
+        'file_view_mode' => 'track_player',
       ),
       'context' => 'panelizer',
       'override_title' => 0,
