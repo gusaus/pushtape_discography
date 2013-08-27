@@ -497,70 +497,6 @@ function pushtape_discography_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-album-field_links'
-  $field_instances['node-album-field_links'] = array(
-    'bundle' => 'album',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_default',
-        'weight' => 14,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_links',
-    'label' => 'Links',
-    'required' => 0,
-    'settings' => array(
-      'attributes' => array(
-        'class' => '',
-        'configurable_title' => 0,
-        'rel' => '',
-        'target' => 'default',
-        'title' => '',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 1,
-      'linkit' => array(
-        'enable' => 0,
-        'insert_plugin' => '',
-      ),
-      'rel_remove' => 'default',
-      'title' => 'optional',
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
-      'user_register_form' => FALSE,
-      'validate_url' => 1,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'link',
-      'settings' => array(),
-      'type' => 'link_field',
-      'weight' => 12,
-    ),
-  );
-
   // Exported field_instance: 'node-album-field_release_date'
   $field_instances['node-album-field_release_date'] = array(
     'bundle' => 'album',
@@ -763,7 +699,10 @@ function pushtape_discography_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
+      'context' => '',
       'display_summary' => 0,
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -963,25 +902,16 @@ function pushtape_discography_field_default_field_instances() {
   $field_instances['node-track-field_audio'] = array(
     'bundle' => 'track',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload or add audio from the media library.',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'module' => 'soundmanager2',
+        'label' => 'above',
+        'module' => 'file_entity',
         'settings' => array(
-          'amplifier' => 0,
-          'audio_type' => 'default',
-          'diameter' => 190,
-          'eq' => 0,
-          'inline' => 0,
-          'pause' => 'pause',
-          'stream' => FALSE,
-          'text' => 'title',
-          'visualization' => 1,
-          'waveform' => 0,
+          'file_view_mode' => 'media_small',
         ),
-        'type' => 'soundmanager2_ui360',
-        'weight' => 0,
+        'type' => 'file_rendered',
+        'weight' => 10,
       ),
       'featured' => array(
         'label' => 'above',
@@ -989,11 +919,36 @@ function pushtape_discography_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 10,
+      ),
+      'mediaplaylist' => array(
+        'label' => 'above',
+        'module' => 'soundmanager2',
+        'settings' => array(
+          'amplifier' => 1,
+          'audio_type' => 'default',
+          'diameter' => 25,
+          'eq' => 1,
+          'inline' => 0,
+          'pause' => 'pause',
+          'stream' => FALSE,
+          'text' => 'filename',
+          'visualization' => 1,
+          'waveform' => 1,
+        ),
+        'type' => 'soundmanager2_ui360',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => -5,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
@@ -1003,7 +958,7 @@ function pushtape_discography_field_default_field_instances() {
     'settings' => array(
       'description_field' => 0,
       'file_directory' => 'audio',
-      'file_extensions' => 'mp3',
+      'file_extensions' => 'wmv mp3 wav mp4 m4a',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
@@ -1014,8 +969,9 @@ function pushtape_discography_field_default_field_instances() {
         'allowed_schemes' => array(
           'private' => 'private',
           'public' => 'public',
+          'soundcloud' => 'soundcloud',
           'vimeo' => 0,
-          'youtube' => 0,
+          'youtube' => 'youtube',
         ),
         'allowed_types' => array(
           'audio' => 'audio',
@@ -1032,7 +988,7 @@ function pushtape_discography_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 1,
+      'weight' => 11,
     ),
   );
 
@@ -1234,70 +1190,6 @@ function pushtape_discography_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-track-field_links'
-  $field_instances['node-track-field_links'] = array(
-    'bundle' => 'track',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_default',
-        'weight' => 14,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_links',
-    'label' => 'Links',
-    'required' => 0,
-    'settings' => array(
-      'attributes' => array(
-        'class' => '',
-        'configurable_title' => 0,
-        'rel' => '',
-        'target' => 'default',
-        'title' => '',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 1,
-      'linkit' => array(
-        'enable' => 0,
-        'insert_plugin' => '',
-      ),
-      'rel_remove' => 'default',
-      'title' => 'optional',
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
-      'user_register_form' => FALSE,
-      'validate_url' => 1,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'link',
-      'settings' => array(),
-      'type' => 'link_field',
-      'weight' => 12,
-    ),
-  );
-
   // Exported field_instance: 'node-track-field_lyrics'
   $field_instances['node-track-field_lyrics'] = array(
     'bundle' => 'track',
@@ -1483,7 +1375,6 @@ function pushtape_discography_field_default_field_instances() {
   t('Format');
   t('Label');
   t('License');
-  t('Links');
   t('Lyrics');
   t('Notes');
   t('Record label catalog number');
@@ -1491,6 +1382,7 @@ function pushtape_discography_field_default_field_instances() {
   t('Release format (CD, LP, Download, etc.)');
   t('Tags');
   t('Tracklist');
+  t('Upload or add audio from the media library.');
 
   return $field_instances;
 }

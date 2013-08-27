@@ -55,6 +55,7 @@ function pushtape_discography_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'artwork_huge',
   );
 
   // Exported image style: artwork_large.
@@ -78,6 +79,7 @@ function pushtape_discography_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'artwork_large',
   );
 
   // Exported image style: artwork_medium.
@@ -100,6 +102,7 @@ function pushtape_discography_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'artwork_medium',
   );
 
   // Exported image style: artwork_small.
@@ -122,6 +125,7 @@ function pushtape_discography_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'artwork_small',
   );
 
   // Exported image style: artwork_thumbnail.
@@ -144,6 +148,7 @@ function pushtape_discography_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'artwork_thumbnail',
   );
 
   return $styles;

@@ -16,3 +16,11 @@ features[content][] = pushtape-discography-demo-2
 features[content][] = pushtape-discography-demo-4
 features[content][] = pushtape-discography-demo-5
 features[features_api][] = api:1
+
+
+; Information added by drush on 2013-08-12
+version = "7.x-1.x-panels-dev"
+core = "7.x"
+project = "pushtape_discography"
+datestamp = "1376349398"
+

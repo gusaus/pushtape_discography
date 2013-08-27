@@ -42,7 +42,6 @@ function pushtape_discography_field_default_field_bases() {
         ),
         'sort' => array(
           'direction' => 'ASC',
-          'field' => 'body:value',
           'property' => 'created',
           'type' => 'property',
         ),
@@ -146,7 +145,7 @@ function pushtape_discography_field_default_field_bases() {
     'settings' => array(
       'display_default' => 0,
       'display_field' => 0,
-      'uri_scheme' => 'public',
+      'uri_scheme' => 'private',
     ),
     'translatable' => 0,
     'type' => 'file',
