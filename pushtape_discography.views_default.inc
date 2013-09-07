@@ -391,7 +391,6 @@ function pushtape_discography_views_default_views() {
   $handler->display->display_options['sorts']['random']['table'] = 'views';
   $handler->display->display_options['sorts']['random']['field'] = 'random';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['filter_groups']['operator'] = 'OR';
   $handler->display->display_options['filter_groups']['groups'] = array(
     1 => 'AND',
     2 => 'AND',
@@ -418,36 +417,9 @@ function pushtape_discography_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'album' => 'album',
-  );
-  $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Feature content (field_featured_status) */
-  $handler->display->display_options['filters']['field_featured_status_value_1']['id'] = 'field_featured_status_value_1';
-  $handler->display->display_options['filters']['field_featured_status_value_1']['table'] = 'field_data_field_featured_status';
-  $handler->display->display_options['filters']['field_featured_status_value_1']['field'] = 'field_featured_status_value';
-  $handler->display->display_options['filters']['field_featured_status_value_1']['value'] = array(
-    1 => '1',
-  );
-  $handler->display->display_options['filters']['field_featured_status_value_1']['group'] = 2;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status_1']['id'] = 'status_1';
-  $handler->display->display_options['filters']['status_1']['table'] = 'node';
-  $handler->display->display_options['filters']['status_1']['field'] = 'status';
-  $handler->display->display_options['filters']['status_1']['value'] = '1';
-  $handler->display->display_options['filters']['status_1']['group'] = 2;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
-  $handler->display->display_options['filters']['type_1']['table'] = 'node';
-  $handler->display->display_options['filters']['type_1']['field'] = 'type';
-  $handler->display->display_options['filters']['type_1']['value'] = array(
     'track' => 'track',
   );
-  $handler->display->display_options['filters']['type_1']['group'] = 2;
-  /* Filter criterion: Content: Album (field_album) */
-  $handler->display->display_options['filters']['field_album_target_id']['id'] = 'field_album_target_id';
-  $handler->display->display_options['filters']['field_album_target_id']['table'] = 'field_data_field_album';
-  $handler->display->display_options['filters']['field_album_target_id']['field'] = 'field_album_target_id';
-  $handler->display->display_options['filters']['field_album_target_id']['operator'] = 'empty';
-  $handler->display->display_options['filters']['field_album_target_id']['group'] = 2;
+  $handler->display->display_options['filters']['type']['group'] = 1;
   $handler->display->display_options['pane_category']['name'] = 'Discography';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $export['releases'] = $view;
@@ -697,6 +669,40 @@ function pushtape_discography_views_default_views() {
   );
   /* Field: Content: Album */
   $handler->display->display_options['fields']['field_album']['id'] = 'field_album';
+  $handler->display->display_options['fields']['field_album']['table'] = 'field_data_field_album';
+  $handler->display->display_options['fields']['field_album']['field'] = 'field_album';
+  $handler->display->display_options['fields']['field_album']['label'] = '';
+  $handler->display->display_options['fields']['field_album']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_album']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_album']['hide_alter_empty'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 0;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'track' => 'track',
+  );
+  $export['tracks'] = $view;
+
+  return $export;
+}
+ptions['fields']['field_album']['id'] = 'field_album';
   $handler->display->display_options['fields']['field_album']['table'] = 'field_data_field_album';
   $handler->display->display_options['fields']['field_album']['field'] = 'field_album';
   $handler->display->display_options['fields']['field_album']['label'] = '';

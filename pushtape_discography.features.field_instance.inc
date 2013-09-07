@@ -1247,6 +1247,56 @@ function pushtape_discography_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-track-field_purchase'
+  $field_instances['node-track-field_purchase'] = array(
+    'bundle' => 'track',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 14,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_purchase',
+    'label' => 'Purchase',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 11,
+    ),
+  );
+
   // Exported field_instance: 'node-track-field_release_date'
   $field_instances['node-track-field_release_date'] = array(
     'bundle' => 'track',
@@ -1354,7 +1404,7 @@ function pushtape_discography_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -1377,6 +1427,7 @@ function pushtape_discography_field_default_field_instances() {
   t('License');
   t('Lyrics');
   t('Notes');
+  t('Purchase');
   t('Record label catalog number');
   t('Release date');
   t('Release format (CD, LP, Download, etc.)');
