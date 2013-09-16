@@ -17,7 +17,7 @@ function pushtape_discography_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'teaser' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'featured' => array(
         'custom_settings' => TRUE,
@@ -191,14 +191,9 @@ function pushtape_discography_strongarm() {
         'default' => 0,
         'choice' => 0,
       ),
-      'teaser' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
       'featured' => array(
-        'status' => 0,
-        'default' => 0,
+        'status' => 1,
+        'default' => 1,
         'choice' => 0,
       ),
     ),
@@ -228,8 +223,8 @@ function pushtape_discography_strongarm() {
         'choice' => 0,
       ),
       'featured' => array(
-        'status' => 0,
-        'default' => 0,
+        'status' => 1,
+        'default' => 1,
         'choice' => 0,
       ),
     ),

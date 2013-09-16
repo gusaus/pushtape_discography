@@ -28,7 +28,7 @@ function pushtape_discography_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 11,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -84,10 +84,11 @@ function pushtape_discography_field_default_field_instances() {
         'weight' => 4,
       ),
       'featured' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -137,9 +138,13 @@ function pushtape_discography_field_default_field_instances() {
         'weight' => 0,
       ),
       'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'panopoly_image_square',
+        ),
+        'type' => 'image',
         'weight' => 0,
       ),
       'full' => array(
@@ -221,7 +226,7 @@ function pushtape_discography_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -271,7 +276,7 @@ function pushtape_discography_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -321,7 +326,7 @@ function pushtape_discography_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -374,7 +379,7 @@ function pushtape_discography_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -419,7 +424,7 @@ function pushtape_discography_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -469,7 +474,7 @@ function pushtape_discography_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -520,7 +525,7 @@ function pushtape_discography_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -573,7 +578,7 @@ function pushtape_discography_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 6,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -625,10 +630,11 @@ function pushtape_discography_field_default_field_instances() {
         'weight' => 1,
       ),
       'featured' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'entityreference',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'entityreference_entity_id',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
