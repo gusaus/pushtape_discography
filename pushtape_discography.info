@@ -20,7 +20,8 @@ dependencies[] = pathauto
 dependencies[] = pushtape_audio
 dependencies[] = pushtape_ui
 dependencies[] = views_content
-datestamp = 1378326276
+dependencies[] = views_responsive_grid
+datestamp = 1379362210
 features[ctools][] = file_entity:file_default_displays:1
 features[ctools][] = page_manager:pages_default:1
 features[ctools][] = panelizer:panelizer:1
@@ -80,7 +81,10 @@ features[node][] = album
 features[node][] = track
 features[page_manager_pages][] = discography
 features[panelizer_defaults][] = node:album:default
+features[panelizer_defaults][] = node:album:default:featured
 features[panelizer_defaults][] = node:track:default
+features[panelizer_defaults][] = node:track:default:featured
+features[panelizer_defaults][] = node:track:default:teaser
 features[taxonomy][] = artists
 features[taxonomy][] = label
 features[taxonomy][] = tags
@@ -145,4 +149,12 @@ version = "7.x-1.x-panels-dev"
 core = "7.x"
 project = "pushtape_discography"
 datestamp = "1377651380"
+
+
+
+; Information added by drush on 2013-09-16
+version = "7.x-1.x-panels-dev"
+core = "7.x"
+project = "pushtape_discography"
+datestamp = "1379362210"
 
