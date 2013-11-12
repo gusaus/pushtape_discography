@@ -148,17 +148,24 @@ function pushtape_discography_panelizer_defaults() {
     $pane->pid = 'new-3';
     $pane->panel = 'footer';
     $pane->type = 'views_panes';
-    $pane->subtype = 'releases-panel_pane_1';
+    $pane->subtype = 'releases-panel_pane_4';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'view_mode' => 'teaser',
-      'widget_title' => NULL,
-      'items_per_page' => NULL,
-      'exposed' => array(
-        'sort_by' => NULL,
-        'sort_order' => NULL,
+      'items_per_page' => '4',
+      'fields_override' => array(
+        'field_artwork' => 1,
+        'title' => 1,
       ),
+      'exposed' => array(
+        'widget_title' => 'Releases',
+        'sort_by' => 'field_release_date_value',
+        'sort_order' => 'DESC',
+      ),
+      'override_title' => '',
+      'override_title_text' => '',
+      'view_mode' => 'teaser',
+      'widget_title' => 'Releases',
       'use_pager' => NULL,
       'pager_id' => NULL,
       'offset' => NULL,
@@ -981,17 +988,24 @@ function pushtape_discography_panelizer_defaults() {
     $pane->pid = 'new-22';
     $pane->panel = 'footer';
     $pane->type = 'views_panes';
-    $pane->subtype = 'releases-panel_pane_1';
+    $pane->subtype = 'releases-panel_pane_4';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'view_mode' => 'teaser',
-      'widget_title' => NULL,
-      'items_per_page' => NULL,
-      'exposed' => array(
-        'sort_by' => NULL,
-        'sort_order' => NULL,
+      'items_per_page' => '4',
+      'fields_override' => array(
+        'field_artwork' => 1,
+        'title' => 1,
       ),
+      'exposed' => array(
+        'widget_title' => 'Releases',
+        'sort_by' => 'field_release_date_value',
+        'sort_order' => 'DESC',
+      ),
+      'override_title' => '',
+      'override_title_text' => '',
+      'view_mode' => 'teaser',
+      'widget_title' => 'Releases',
       'use_pager' => NULL,
       'pager_id' => NULL,
       'offset' => NULL,

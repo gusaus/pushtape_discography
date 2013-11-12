@@ -21,7 +21,7 @@ dependencies[] = pushtape_audio
 dependencies[] = pushtape_ui
 dependencies[] = views_content
 dependencies[] = views_responsive_grid
-datestamp = 1379362210
+datestamp = 1382488318
 features[ctools][] = file_entity:file_default_displays:1
 features[ctools][] = page_manager:pages_default:1
 features[ctools][] = panelizer:panelizer:1
@@ -79,7 +79,9 @@ features[image][] = artwork_small
 features[image][] = artwork_thumbnail
 features[node][] = album
 features[node][] = track
+features[page_manager_pages][] = albums
 features[page_manager_pages][] = discography
+features[page_manager_pages][] = tracks
 features[panelizer_defaults][] = node:album:default
 features[panelizer_defaults][] = node:album:default:featured
 features[panelizer_defaults][] = node:track:default
@@ -140,21 +142,3 @@ features_exclude[field][node-album-field_catalog] = node-album-field_catalog
 features_exclude[field][node-album-field_format] = node-album-field_format
 features_exclude[field][node-album-field_country] = node-album-field_country
 ude[field][node-album-field_catalog] = node-album-field_catalog
-features_exclude[field][node-album-field_format] = node-album-field_format
-features_exclude[field][node-album-field_country] = node-album-field_country
-
-
-; Information added by drush on 2013-08-27
-version = "7.x-1.x-panels-dev"
-core = "7.x"
-project = "pushtape_discography"
-datestamp = "1377651380"
-
-
-
-; Information added by drush on 2013-09-16
-version = "7.x-1.x-panels-dev"
-core = "7.x"
-project = "pushtape_discography"
-datestamp = "1379362210"
-
