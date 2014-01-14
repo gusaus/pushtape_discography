@@ -24,3 +24,11 @@ core = "7.x"
 project = "pushtape_discography"
 datestamp = "1384243657"
 
+
+
+; Information added by drush on 2014-01-14
+version = "7.x-1.x-panels-dev"
+core = "7.x"
+project = "pushtape_discography"
+datestamp = "1389690493"
+
