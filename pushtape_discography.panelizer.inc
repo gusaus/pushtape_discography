@@ -30,7 +30,7 @@ function pushtape_discography_panelizer_defaults() {
   $panelizer->link_to_entity = TRUE;
   $panelizer->extra = array();
   $display = new panels_display();
-  $display->layout = 'sutro_double';
+  $display->layout = 'coltrane_double';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -513,7 +513,7 @@ function pushtape_discography_panelizer_defaults() {
   $panelizer->link_to_entity = FALSE;
   $panelizer->extra = array();
   $display = new panels_display();
-  $display->layout = 'boxton';
+  $display->layout = 'bowie';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -710,7 +710,7 @@ function pushtape_discography_panelizer_defaults() {
   $panelizer->link_to_entity = TRUE;
   $panelizer->extra = array();
   $display = new panels_display();
-  $display->layout = 'sutro_double';
+  $display->layout = 'coltrane_double';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -1508,7 +1508,7 @@ function pushtape_discography_panelizer_defaults() {
   $panelizer->link_to_entity = TRUE;
   $panelizer->extra = array();
   $display = new panels_display();
-  $display->layout = 'boxton';
+  $display->layout = 'bowie';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(

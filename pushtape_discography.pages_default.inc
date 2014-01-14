@@ -159,7 +159,7 @@ function pushtape_discography_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'boxton';
+  $display->layout = 'bowie';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
