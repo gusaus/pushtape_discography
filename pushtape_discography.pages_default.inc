@@ -175,86 +175,6 @@ function pushtape_discography_default_page_manager_pages() {
     $pane->pid = 'new-2';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
-    $pane->subtype = 'albums-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'items_per_page' => '10',
-      'fields_override' => array(
-        'field_artwork' => 1,
-        'title' => 1,
-      ),
-      'exposed' => array(
-        'widget_title' => '',
-        'sort_by' => 'field_release_date_value',
-        'sort_order' => 'DESC',
-      ),
-      'override_title' => '',
-      'override_title_text' => '',
-      'view_mode' => 'teaser',
-      'widget_title' => '',
-      'use_pager' => NULL,
-      'pager_id' => NULL,
-      'offset' => NULL,
-      'link_to_view' => NULL,
-      'more_link' => NULL,
-      'path' => NULL,
-      'view_settings' => 'fields',
-      'header_type' => 'none',
-    );
-    $pane->cache = array();
-    $pane->style = array();
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['contentmain'][0] = 'new-2';
-    $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'contentmain';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'tracks-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'items_per_page' => '10',
-      'fields_override' => array(
-        'field_artwork' => 1,
-        'field_album' => 0,
-        'title' => 0,
-        'field_audio' => 0,
-      ),
-      'exposed' => array(
-        'widget_title' => 'Tracks',
-        'sort_by' => 'field_release_date_value',
-        'sort_order' => 'DESC',
-      ),
-      'override_title' => '',
-      'override_title_text' => '',
-      'view_mode' => 'teaser',
-      'widget_title' => 'Tracks',
-      'use_pager' => NULL,
-      'pager_id' => NULL,
-      'offset' => NULL,
-      'link_to_view' => NULL,
-      'more_link' => NULL,
-      'path' => NULL,
-      'view_settings' => 'fields',
-      'header_type' => 'none',
-    );
-    $pane->cache = array();
-    $pane->style = array();
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['contentmain'][1] = 'new-3';
-    $pane = new stdClass();
-    $pane->pid = 'new-4';
-    $pane->panel = 'contentmain';
-    $pane->type = 'views_panes';
     $pane->subtype = 'releases-panel_pane_4';
     $pane->shown = TRUE;
     $pane->access = array();
@@ -265,14 +185,13 @@ function pushtape_discography_default_page_manager_pages() {
         'title' => 1,
       ),
       'exposed' => array(
-        'widget_title' => 'Releases',
-        'sort_by' => 'field_release_date_value',
         'sort_order' => 'DESC',
+        'sort_by' => 'field_release_date_value',
       ),
       'override_title' => '',
       'override_title_text' => '',
       'view_mode' => 'teaser',
-      'widget_title' => 'Releases',
+      'widget_title' => '',
       'use_pager' => NULL,
       'pager_id' => NULL,
       'offset' => NULL,
@@ -292,12 +211,12 @@ function pushtape_discography_default_page_manager_pages() {
       'css_class' => '',
     );
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['contentmain'][2] = 'new-4';
+    $display->content['new-2'] = $pane;
+    $display->panels['contentmain'][0] = 'new-2';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-4';
+  $display->title_pane = 'new-2';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['discography'] = $page;
@@ -361,7 +280,7 @@ function pushtape_discography_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-3';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
     $pane->subtype = 'tracks-panel_pane_1';
@@ -401,8 +320,8 @@ function pushtape_discography_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['contentmain'][0] = 'new-5';
+    $display->content['new-3'] = $pane;
+    $display->panels['contentmain'][0] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
