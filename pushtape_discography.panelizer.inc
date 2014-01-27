@@ -108,7 +108,7 @@ function pushtape_discography_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'above',
-      'formatter' => 'entityreference_entity_view',
+      'formatter' => 'pushtape_ui_tracklist_view',
       'delta_limit' => '0',
       'delta_offset' => '0',
       'delta_reversed' => 0,
@@ -489,7 +489,7 @@ function pushtape_discography_panelizer_defaults() {
     $display->content['new-11'] = $pane;
     $display->panels['secondcolumn2'][1] = 'new-11';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = '0';
   $panelizer->display = $display;
   $export['node:album:default'] = $panelizer;
 
