@@ -952,10 +952,10 @@ function pushtape_discography_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'text_default',
-      'delta_limit' => 0,
+      'formatter' => 'link_default',
+      'delta_limit' => '0',
       'delta_offset' => '0',
-      'delta_reversed' => FALSE,
+      'delta_reversed' => 0,
       'formatter_settings' => array(),
       'context' => array(),
       'override_title' => 0,
@@ -1275,7 +1275,7 @@ function pushtape_discography_panelizer_defaults() {
     $display->content['new-29'] = $pane;
     $display->panels['secondcolumn2'][2] = 'new-29';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-17';
+  $display->title_pane = '0';
   $panelizer->display = $display;
   $export['node:track:default'] = $panelizer;
 

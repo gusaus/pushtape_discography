@@ -18,33 +18,11 @@ features[content][] = pushtape-discography-demo-5
 features[features_api][] = api:2
 
 
-; Information added by drush on 2013-11-12
+
+
+; Information added by drush on 2014-01-24
 version = "7.x-1.x-panels-dev"
 core = "7.x"
 project = "pushtape_discography"
-datestamp = "1384243657"
-
-
-
-; Information added by drush on 2014-01-14
-version = "7.x-1.x-panels-dev"
-core = "7.x"
-project = "pushtape_discography"
-datestamp = "1389690493"
-
-
-
-; Information added by drush on 2014-01-18
-version = "7.x-1.x-panels-dev"
-core = "7.x"
-project = "pushtape_discography"
-datestamp = "1390013280"
-
-
-
-; Information added by drush on 2014-01-20
-version = "7.x-1.x-panels-dev"
-core = "7.x"
-project = "pushtape_discography"
-datestamp = "1390246975"
+datestamp = "1390600604"
 

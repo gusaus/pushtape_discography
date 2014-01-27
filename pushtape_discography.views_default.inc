@@ -456,13 +456,46 @@ function pushtape_discography_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['style_plugin'] = 'list';
-  $handler->display->display_options['style_options']['type'] = 'ol';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['inline'] = array(
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['columns'] = array(
     'field_audio' => 'field_audio',
     'title' => 'title',
     'field_artist' => 'field_artist',
+    'field_purchase' => 'field_purchase',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_audio' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+      'responsive' => 'priority-medium',
+    ),
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+      'responsive' => 'priority-medium',
+    ),
+    'field_artist' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+      'responsive' => 'priority-low',
+    ),
+    'field_purchase' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+      'responsive' => 'priority-low',
+    ),
   );
   /* Relationship: Entity Reference: Referencing entity */
   $handler->display->display_options['relationships']['reverse_field_tracklist_node']['id'] = 'reverse_field_tracklist_node';
@@ -475,16 +508,17 @@ function pushtape_discography_views_default_views() {
   $handler->display->display_options['fields']['field_audio']['field'] = 'field_audio';
   $handler->display->display_options['fields']['field_audio']['label'] = '';
   $handler->display->display_options['fields']['field_audio']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_audio']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_audio']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_audio']['type'] = 'soundmanager2_ui360';
   $handler->display->display_options['fields']['field_audio']['settings'] = array(
     'pause' => 'pause',
-    'inline' => 0,
+    'inline' => 1,
     'visualization' => 0,
     'waveform' => 0,
     'eq' => 0,
     'amplifier' => 0,
-    'diameter' => '50',
+    'diameter' => '25',
     'text' => 'title',
   );
   /* Field: Content: Title */
@@ -502,6 +536,17 @@ function pushtape_discography_views_default_views() {
   $handler->display->display_options['fields']['field_artist']['label'] = '';
   $handler->display->display_options['fields']['field_artist']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_artist']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Content: Purchase */
+  $handler->display->display_options['fields']['field_purchase']['id'] = 'field_purchase';
+  $handler->display->display_options['fields']['field_purchase']['table'] = 'field_data_field_purchase';
+  $handler->display->display_options['fields']['field_purchase']['field'] = 'field_purchase';
+  $handler->display->display_options['fields']['field_purchase']['label'] = '';
+  $handler->display->display_options['fields']['field_purchase']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_purchase']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_purchase']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_purchase']['group_column'] = 'value';
+  $handler->display->display_options['fields']['field_purchase']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_purchase']['delta_offset'] = '0';
   /* Sort criterion: Content: Tracklist (field_tracklist:delta) */
   $handler->display->display_options['sorts']['delta']['id'] = 'delta';
   $handler->display->display_options['sorts']['delta']['table'] = 'field_data_field_tracklist';
@@ -526,6 +571,43 @@ function pushtape_discography_views_default_views() {
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_audio' => 'field_audio',
+    'title' => 'title',
+    'field_artist' => 'field_artist',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_audio' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+      'responsive' => '',
+    ),
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+      'responsive' => '',
+    ),
+    'field_artist' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+      'responsive' => 'priority-medium',
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $export['tracklist'] = $view;
 
   $view = new view();

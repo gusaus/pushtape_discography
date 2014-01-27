@@ -1264,9 +1264,9 @@ function pushtape_discography_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
+        'module' => 'link',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'link_default',
         'weight' => 14,
       ),
       'featured' => array(
@@ -1287,21 +1287,35 @@ function pushtape_discography_field_default_field_instances() {
     'label' => 'Purchase',
     'required' => 0,
     'settings' => array(
+      'attributes' => array(
+        'class' => 'button',
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
       ),
-      'text_processing' => 1,
+      'rel_remove' => 'default',
+      'title' => 'value',
+      'title_maxlength' => 128,
+      'title_value' => 'Buy',
+      'url' => 0,
       'user_register_form' => FALSE,
+      'validate_url' => 1,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 11,
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 15,
     ),
   );
 
