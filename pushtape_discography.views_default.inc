@@ -139,27 +139,13 @@ function pushtape_discography_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'responsive_grid';
-  $handler->display->display_options['style_options']['columns'] = '1';
-  $handler->display->display_options['style_options']['wrapper_classes'] = 'group widgets';
-  $handler->display->display_options['style_options']['column_classes'] = 'col span_1_of_1';
-  $handler->display->display_options['style_options']['first_column_classes'] = '';
-  $handler->display->display_options['style_options']['last_column_classes'] = '';
-  $handler->display->display_options['style_options']['row_classes'] = '';
-  $handler->display->display_options['style_options']['first_row_classes'] = '';
-  $handler->display->display_options['style_options']['last_row_classes'] = '';
-  $handler->display->display_options['style_options']['default_classes'] = 1;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'panels_fields';
-  $handler->display->display_options['row_options']['layout'] = 'burr';
-  $handler->display->display_options['row_options']['regions'] = array(
-    'field_artwork' => 'sidebar',
-    'title' => 'sidebar',
-    'field_artist' => 'sidebar',
-    'field_album' => 'sidebar',
-    'field_tracklist' => 'contentmain',
-  );
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
@@ -181,7 +167,7 @@ function pushtape_discography_views_default_views() {
   $handler->display->display_options['fields']['field_artwork']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['field_artwork']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_artwork']['settings'] = array(
-    'image_style' => 'artwork_small',
+    'image_style' => 'panopoly_image_full',
     'image_link' => 'content',
   );
   /* Field: Content: Title */
@@ -196,28 +182,9 @@ function pushtape_discography_views_default_views() {
   $handler->display->display_options['fields']['field_artist']['table'] = 'field_data_field_artist';
   $handler->display->display_options['fields']['field_artist']['field'] = 'field_artist';
   $handler->display->display_options['fields']['field_artist']['label'] = '';
+  $handler->display->display_options['fields']['field_artist']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_artist']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_artist']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Content: Album */
-  $handler->display->display_options['fields']['field_album']['id'] = 'field_album';
-  $handler->display->display_options['fields']['field_album']['table'] = 'field_data_field_album';
-  $handler->display->display_options['fields']['field_album']['field'] = 'field_album';
-  $handler->display->display_options['fields']['field_album']['label'] = '';
-  $handler->display->display_options['fields']['field_album']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_album']['settings'] = array(
-    'link' => 0,
-  );
-  /* Field: Content: Tracklist */
-  $handler->display->display_options['fields']['field_tracklist']['id'] = 'field_tracklist';
-  $handler->display->display_options['fields']['field_tracklist']['table'] = 'field_data_field_tracklist';
-  $handler->display->display_options['fields']['field_tracklist']['field'] = 'field_tracklist';
-  $handler->display->display_options['fields']['field_tracklist']['type'] = 'entityreference_entity_view';
-  $handler->display->display_options['fields']['field_tracklist']['settings'] = array(
-    'view_mode' => 'teaser',
-    'links' => 1,
-  );
-  $handler->display->display_options['fields']['field_tracklist']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_tracklist']['multi_type'] = 'ul';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Global: Random */
   $handler->display->display_options['sorts']['random']['id'] = 'random';
@@ -608,6 +575,63 @@ function pushtape_discography_views_default_views() {
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block_2');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_audio' => 'field_audio',
+    'title' => 'title',
+    'field_artist' => 'field_artist',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_audio' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+      'responsive' => '',
+    ),
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+      'responsive' => '',
+    ),
+    'field_artist' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+      'responsive' => 'priority-medium',
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_tracklist_node']['id'] = 'reverse_field_tracklist_node';
+  $handler->display->display_options['relationships']['reverse_field_tracklist_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_tracklist_node']['field'] = 'reverse_field_tracklist_node';
+  $handler->display->display_options['relationships']['reverse_field_tracklist_node']['required'] = TRUE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Album (field_album) */
+  $handler->display->display_options['arguments']['field_album_target_id']['id'] = 'field_album_target_id';
+  $handler->display->display_options['arguments']['field_album_target_id']['table'] = 'field_data_field_album';
+  $handler->display->display_options['arguments']['field_album_target_id']['field'] = 'field_album_target_id';
+  $handler->display->display_options['arguments']['field_album_target_id']['relationship'] = 'reverse_field_tracklist_node';
+  $handler->display->display_options['arguments']['field_album_target_id']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['field_album_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_album_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_album_target_id']['summary_options']['items_per_page'] = '25';
   $export['tracklist'] = $view;
 
   $view = new view();
@@ -693,6 +717,117 @@ function pushtape_discography_views_default_views() {
     'track' => 'track',
   );
 
+  /* Display: Track table */
+  $handler = $view->new_display('panel_pane', 'Track table', 'panel_pane_4');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_audio' => 'field_audio',
+    'field_artwork' => 'field_artwork',
+    'title' => 'title',
+    'field_album' => 'field_album',
+    'field_purchase' => 'field_purchase',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_audio' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => 'views-align-left',
+      'separator' => '',
+      'empty_column' => 0,
+      'responsive' => '',
+    ),
+    'field_artwork' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => 'views-align-left',
+      'separator' => '',
+      'empty_column' => 0,
+      'responsive' => '',
+    ),
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => 'views-align-left',
+      'separator' => '',
+      'empty_column' => 0,
+      'responsive' => '',
+    ),
+    'field_album' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => 'views-align-left',
+      'separator' => '',
+      'empty_column' => 0,
+      'responsive' => '',
+    ),
+    'field_purchase' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => 'views-align-left',
+      'separator' => '',
+      'empty_column' => 0,
+      'responsive' => '',
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Audio */
+  $handler->display->display_options['fields']['field_audio']['id'] = 'field_audio';
+  $handler->display->display_options['fields']['field_audio']['table'] = 'field_data_field_audio';
+  $handler->display->display_options['fields']['field_audio']['field'] = 'field_audio';
+  $handler->display->display_options['fields']['field_audio']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_audio']['type'] = 'soundmanager2_ui360';
+  $handler->display->display_options['fields']['field_audio']['settings'] = array(
+    'pause' => 'pause',
+    'inline' => 1,
+    'visualization' => 0,
+    'waveform' => 1,
+    'eq' => 0,
+    'amplifier' => 1,
+    'diameter' => '25',
+    'text' => 'filename',
+  );
+  /* Field: Content: Artwork */
+  $handler->display->display_options['fields']['field_artwork']['id'] = 'field_artwork';
+  $handler->display->display_options['fields']['field_artwork']['table'] = 'field_data_field_artwork';
+  $handler->display->display_options['fields']['field_artwork']['field'] = 'field_artwork';
+  $handler->display->display_options['fields']['field_artwork']['label'] = '';
+  $handler->display->display_options['fields']['field_artwork']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_artwork']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_artwork']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_artwork']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_artwork']['settings'] = array(
+    'image_style' => 'panopoly_image_thumbnail',
+    'image_link' => 'content',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Album */
+  $handler->display->display_options['fields']['field_album']['id'] = 'field_album';
+  $handler->display->display_options['fields']['field_album']['table'] = 'field_data_field_album';
+  $handler->display->display_options['fields']['field_album']['field'] = 'field_album';
+  $handler->display->display_options['fields']['field_album']['label'] = 'Release';
+  $handler->display->display_options['fields']['field_album']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_album']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_album']['settings'] = array(
+    'link' => 1,
+  );
+  /* Field: Content: Purchase */
+  $handler->display->display_options['fields']['field_purchase']['id'] = 'field_purchase';
+  $handler->display->display_options['fields']['field_purchase']['table'] = 'field_data_field_purchase';
+  $handler->display->display_options['fields']['field_purchase']['field'] = 'field_purchase';
+  $handler->display->display_options['fields']['field_purchase']['click_sort_column'] = 'url';
+  $handler->display->display_options['pane_category']['name'] = 'Discography';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+
   /* Display: Track grid */
   $handler = $view->new_display('panel_pane', 'Track grid', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
@@ -741,6 +876,7 @@ function pushtape_discography_views_default_views() {
   $handler->display->display_options['fields']['field_audio']['table'] = 'field_data_field_audio';
   $handler->display->display_options['fields']['field_audio']['field'] = 'field_audio';
   $handler->display->display_options['fields']['field_audio']['label'] = '';
+  $handler->display->display_options['fields']['field_audio']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_audio']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_audio']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_audio']['type'] = 'soundmanager2_inline_player';
@@ -783,6 +919,7 @@ function pushtape_discography_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Featured Track', 'panel_pane_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Featured Track';
+  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';

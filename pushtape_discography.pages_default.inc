@@ -283,39 +283,16 @@ function pushtape_discography_default_page_manager_pages() {
     $pane->pid = 'new-3';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
-    $pane->subtype = 'tracks-panel_pane_1';
+    $pane->subtype = 'tracks-panel_pane_4';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'items_per_page' => '10',
-      'fields_override' => array(
-        'field_artwork' => 1,
-        'field_album' => 0,
-        'title' => 0,
-        'field_audio' => 1,
-      ),
-      'exposed' => array(
-        'widget_title' => 'Tracks',
-        'sort_by' => 'field_release_date_value',
-        'sort_order' => 'DESC',
-      ),
-      'override_title' => '',
-      'override_title_text' => '',
-      'view_mode' => 'teaser',
-      'widget_title' => 'Tracks',
-      'use_pager' => NULL,
-      'pager_id' => NULL,
-      'offset' => NULL,
-      'link_to_view' => NULL,
-      'more_link' => NULL,
-      'path' => NULL,
       'view_settings' => 'fields',
       'header_type' => 'none',
+      'view_mode' => 'teaser',
     );
     $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
+    $pane->style = array();
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
