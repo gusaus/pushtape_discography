@@ -20,9 +20,9 @@ features[features_api][] = api:2
 
 
 
-; Information added by drush on 2014-01-24
+; Information added by drush on 2014-02-06
 version = "7.x-1.x-panels-dev"
 core = "7.x"
 project = "pushtape_discography"
-datestamp = "1390600604"
+datestamp = "1391652831"
 
