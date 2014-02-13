@@ -21,7 +21,6 @@ function pushtape_discography_defaultconfig_features() {
 function pushtape_discography_defaultconfig_user_default_permissions() {
   $permissions = array();
 
-
   // Exported permission: 'create album content'.
   $permissions['create album content'] = array(
     'name' => 'create album content',
