@@ -52,6 +52,36 @@ function pushtape_discography_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 0,
+          'full_html' => 0,
+          'panopoly_html_text' => 'panopoly_html_text',
+          'panopoly_wysiwyg_text' => 'panopoly_wysiwyg_text',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'panopoly_html_text' => array(
+              'weight' => -9,
+            ),
+            'panopoly_wysiwyg_text' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
       'display_summary' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
@@ -341,6 +371,36 @@ function pushtape_discography_field_default_field_instances() {
     'label' => 'Credits',
     'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 0,
+          'full_html' => 0,
+          'panopoly_html_text' => 'panopoly_html_text',
+          'panopoly_wysiwyg_text' => 'panopoly_wysiwyg_text',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'panopoly_html_text' => array(
+              'weight' => -9,
+            ),
+            'panopoly_wysiwyg_text' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -766,10 +826,37 @@ function pushtape_discography_field_default_field_instances() {
     'label' => 'Notes',
     'required' => 0,
     'settings' => array(
-      'context' => '',
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 0,
+          'full_html' => 0,
+          'panopoly_html_text' => 'panopoly_html_text',
+          'panopoly_wysiwyg_text' => 'panopoly_wysiwyg_text',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'panopoly_html_text' => array(
+              'weight' => -9,
+            ),
+            'panopoly_wysiwyg_text' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
       'display_summary' => 0,
-      'dnd_enabled' => 0,
-      'mee_enabled' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -1092,6 +1179,36 @@ function pushtape_discography_field_default_field_instances() {
     'label' => 'Credits',
     'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 0,
+          'full_html' => 0,
+          'panopoly_html_text' => 'panopoly_html_text',
+          'panopoly_wysiwyg_text' => 'panopoly_wysiwyg_text',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'panopoly_html_text' => array(
+              'weight' => -9,
+            ),
+            'panopoly_wysiwyg_text' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -1297,6 +1414,36 @@ function pushtape_discography_field_default_field_instances() {
     'label' => 'Lyrics',
     'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 0,
+          'full_html' => 0,
+          'panopoly_html_text' => 'panopoly_html_text',
+          'panopoly_wysiwyg_text' => 'panopoly_wysiwyg_text',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'panopoly_html_text' => array(
+              'weight' => -9,
+            ),
+            'panopoly_wysiwyg_text' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
