@@ -7,16 +7,16 @@
 /**
  * Implements hook_ctools_plugin_api().
  */
-function pushtape_discography_ctools_plugin_api() {
-  list($module, $api) = func_get_args();
+function pushtape_discography_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "file_entity" && $api == "file_default_displays") {
     return array("version" => "1");
   }
-  list($module, $api) = func_get_args();
+  if ($module == "page_manager" && $api == "pages_default") {
+    return array("version" => "1");
+  }
   if ($module == "panelizer" && $api == "panelizer") {
     return array("version" => "1");
   }
-  list($module, $api) = func_get_args();
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -25,7 +25,7 @@ function pushtape_discography_ctools_plugin_api() {
 /**
  * Implements hook_views_api().
  */
-function pushtape_discography_views_api() {
+function pushtape_discography_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
@@ -55,6 +55,7 @@ function pushtape_discography_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'artwork_huge',
   );
 
   // Exported image style: artwork_large.
@@ -78,6 +79,7 @@ function pushtape_discography_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'artwork_large',
   );
 
   // Exported image style: artwork_medium.
@@ -100,6 +102,7 @@ function pushtape_discography_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'artwork_medium',
   );
 
   // Exported image style: artwork_small.
@@ -122,6 +125,7 @@ function pushtape_discography_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'artwork_small',
   );
 
   // Exported image style: artwork_thumbnail.
@@ -144,6 +148,7 @@ function pushtape_discography_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'artwork_thumbnail',
   );
 
   return $styles;
