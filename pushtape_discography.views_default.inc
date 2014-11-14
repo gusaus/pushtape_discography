@@ -167,7 +167,7 @@ function pushtape_discography_views_default_views() {
   $handler->display->display_options['fields']['field_artwork']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['field_artwork']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_artwork']['settings'] = array(
-    'image_style' => 'panopoly_image_full',
+    'image_style' => 'artwork_medium',
     'image_link' => 'content',
   );
   /* Field: Content: Title */
