@@ -174,5 +174,4 @@ features_exclude[field][node-album-field_catalog] = node-album-field_catalog
 features_exclude[field][node-album-field_format] = node-album-field_format
 features_exclude[field][node-album-field_country] = node-album-field_country
 features_exclude[field_base][body] = body
-mtime = 1422472578
 ude[field][node-album-field_catalog] = node-album-field_catalog
